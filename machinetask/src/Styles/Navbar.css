@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#navbar-fullpage{
+    /* border: 1px solid black; */
+    width: 100vw;
+    height: 9vh;
+    background-color: rgb(3,37,65);
+    padding-top: 1px;
+}
+
+#navbar-page{
+    /* border: 1px solid black; */
+    width: 95%;
+    margin: auto;
+    height: 7vh;
+    margin-top: 1vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+#navbar-left{
+    /* border: 1px solid black; */
+    width: 40%;
+    height: 7vh;
+    display: flex;
+}
+
+.navbar-left-one{
+    /* border: 1px solid black; */
+    width: 30%;
+    height: 7vh;    
+}
+
+.navbar-left-one img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.navbar-left-two{
+    /* border: 1px solid black; */
+    width: 17.5%;
+    height: 7vh;
+}
+
+.navbar-left-two p{
+    font-weight: 550;
+    position: relative;
+    top: 23%;
+    color: white;
+}
+
+#navbar-right{
+    /* border: 1px solid black; */
+    width: 30%;
+    height: 7vh;
+    display: flex;
+}
+
+.navbar-right-one{
+    /* border: 1px solid black; */
+    width: 17%;
+    height: 7vh;
+}
+
+.navbar-right-one i{
+    font-size: 20px;
+    position: relative;
+    top: 30%;
+    color: white;
+}
+
+.navbar-right-two{
+    /* border: 1px solid black; */
+    width: 17%;
+    height: 7vh;
+}
+
+.navitem{
+    border: 1px solid;
+    height: 60%;
+    width: 70%;
+    position: relative;
+    top: 20%;
+    left: 19%;
+    font-weight: 550;
+    border-color: white;
+    color: white;
+}
+
+.navbar-right-three{
+    /* border: 1px solid black; */
+    width: 25%;
+    height: 7vh;
+    color: white;
+}
+
+.navbar-right-three p{
+    font-weight: 550;
+    position: relative;
+    top: 23%;
+}
+
+.navbar-right-four{
+    /* border: 1px solid black; */
+    width: 25%;
+    height: 7vh;
+}
+
+.navbar-right-four p{
+    font-weight: 550;
+    position: relative;
+    top: 23%;
+    color: white;
+}
+
+.navbar-right-five{
+    /* border: 1px solid black; */
+    width: 16%;
+    height: 7vh;
+}
+
+.navbar-right-five i{
+    font-size: 20px;
+    position: relative;
+    top: 30%;
+    color: white;
+}
