@@ -79,10 +79,6 @@ form{
     margin-top: 1%;
 }
 
-form>label{
-    /* border: 1px solid black; */
-}
-
 form input{
     width: 98%;
     height: 6vh;
@@ -94,7 +90,7 @@ form input{
     /* border: 1px solid black; */
     text-align: left;
     position: relative;
-    margin-top: 2%
+    margin-top: 1% ;
 }
 
 .register-right-one-box2{

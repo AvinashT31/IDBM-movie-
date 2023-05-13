@@ -27,7 +27,7 @@ const Register = () => {
       alert("Email is already present")
       setuserData({ name: "", password: "", confirmpassword: "", email: "" });
     }
-    else if (userData.password < 8) {
+    else if (userData.password.length < 8) {
       alert("Password should be 8 digit")
       setuserData({ name: "", password: "", confirmpassword: "", email: "" });
     }
