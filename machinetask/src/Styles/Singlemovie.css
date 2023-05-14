@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#singlemovie{
+    border: 1px solid black;
+    width: 100vw;
+    height: 100vh;
+}
+
+#castmovie{
+    border: 1px solid black;
+    width: 90vw;
+    margin: auto;
+    margin-top: 5vh;
+    height: 90vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+#castmoviestar{
+    border: 1px solid black;
+    width: 13%;
+    height: 30vh;
+}
+
+#castpic{
+    border: 1px solid black;
+    width: 100%;
+    height: 20vh;
+}
+
+#castpic img{
+    width: 100%;
+    height: 100%;
+}
+
+#castname{
+    border: 1px solid black;
+    width: 100%;
+    height: 10vh;
+    text-align: left;
+    font-weight: 550;
+}

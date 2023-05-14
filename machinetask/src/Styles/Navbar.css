@@ -10,6 +10,7 @@
     height: 9vh;
     background-color: rgb(3,37,65);
     padding-top: 1px;
+    box-sizing: border-box;
 }
 
 #navbar-page{
