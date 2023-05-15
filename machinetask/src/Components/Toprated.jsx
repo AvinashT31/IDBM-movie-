@@ -20,6 +20,9 @@ const Toprated = () => {
     return (
         <div>
             <div id='homepagefullpage'>
+                <div id='homepagetop'>
+
+                </div>
                 <div id='homepage'>
                     {topratedmovie && topratedmovie.map((e) => (
                         <div id='homepage-one'>

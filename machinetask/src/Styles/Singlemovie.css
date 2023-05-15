@@ -4,43 +4,104 @@
     box-sizing: border-box;
 }
 
-#singlemovie{
-    border: 1px solid black;
+#singlemoviepage{
+    /* border: 1px solid black; */
     width: 100vw;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
-#castmovie{
-    border: 1px solid black;
-    width: 90vw;
+#moviepage{
+    /* border: 1px solid black; */
+    width: 100vw;
+    height: 60vh;
+}
+
+#movietoppage{
+    /* border: 1px solid black; */
+    width: 90%;
     margin: auto;
-    margin-top: 5vh;
-    height: 90vh;
+    height: 60vh;
     display: flex;
-    justify-content: space-between;
 }
 
-#castmoviestar{
-    border: 1px solid black;
-    width: 13%;
-    height: 30vh;
+#movietopleftpage{
+    /* border: 1px solid black; */
+    width: 55%;
+    height: 60vh;
 }
 
-#castpic{
-    border: 1px solid black;
+#moviepages{
+    /* border: 1px solid black; */
     width: 100%;
-    height: 20vh;
+    height: 30vh;
+    display: flex;
 }
 
-#castpic img{
+#movietopleftpage-one{
+    /* border: 1px solid black; */
+    width: 20%;
+    height: 25vh;
+    position: relative;
+    top: 3%;
+    left: 3%;
+}
+
+#movietopleftpage-one img{
     width: 100%;
     height: 100%;
 }
 
-#castname{
-    border: 1px solid black;
+#movietopleftpage-two{
+    /* border: 1px solid black; */
+    width: 60%;
+    height: 25vh;
+    position: relative;
+    top: 3%;
+    left: 7%;
+}
+
+#movietopleft-heading{
+    /* border: 1px solid black; */
     width: 100%;
-    height: 10vh;
+    height: 12vh;
     text-align: left;
+    /* white-space: nowrap; */
+    font-size: 11px;
+}
+
+#movietopleft-heading p{
+    margin-top: 2%;
+    font-size: 16px;
     font-weight: 550;
 }
+
+#movietopbottom-heading{
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 12vh;
+    text-align: left;
+    line-height: 2;
+    font-weight: 550;
+}
+
+#movieoverview{
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 30vh;
+    line-height: 2;
+    text-align: left;
+}
+
+#movietoprightpage{
+    /* border: 1px solid black; */
+    width: 45%;
+    height: 60vh;
+}
+
+#movietoprightpage img{
+    width: 80%;
+    height: 80%;
+    margin-top: 10px;
+}
+
+

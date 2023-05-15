@@ -43,22 +43,81 @@ const API_key = "c45a857c193f6302f2b5061c3b85e743";
 const Singlemovie = () => {
     const [single, setSingle] = useState([]);
 
-    const { id } = useParams();
+    const [heading, setheading] = useState([]);
+
+    // const { id } = useParams();
+    const data = useParams();
+    console.log(data.id, "data");
 
     useEffect(() => {
-        const fetchurl = axios.get(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=${API_key}&language=en-US`)
-            .then(response => {
-                setSingle(response.data.cast);
+        // const fetchurl = axios.get(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=${API_key}&language=en-US`)
+        //     .then(response => {
+        //         setSingle(response.data.cast);
+        //     })
+        //     .catch(error => {
+        //         console.log(error);
+        //     });
+
+        fetch(`https://api.themoviedb.org/3/movie/${data.id}?api_key=${API_key}&language=en-US`)
+            .then(res => res.json())
+            .then(json => setheading(json))
+
+        // fetch(`https://api.themoviedb.org/3/movie/${data.id}/credits?api_key=${API_key}&language=en-US`)
+        //     .then(res => res.json())
+        //     .then(json => console.log(json.cast, "helllo"))
+        //     .then(json => setSingle(json.cast))
+
+        fetch(`https://api.themoviedb.org/3/movie/${data.id}/credits?api_key=${API_key}&language=en-US`)
+            .then(res => res.json())
+            .then(json => {
+                if (json.cast) {
+                    console.log(json, "helllo");
+                    setSingle(json.cast);
+                } else {
+                    console.log('Cast not found in response.');
+                }
             })
-            .catch(error => {
-                console.log(error);
-            });
-    }, [id]);
+            .catch(err => console.error(err));
+
+
+
+
+    }, []);
+    console.log(heading, "heading");
     console.log(single, "single");
 
     return (
         <div>
-            <div id='homepagefullpage'>
+            <div id='singlemoviepage'>
+                <div id='moviepage'>
+                    <div id='movietoppage'>
+                        <div id='movietopleftpage'>
+                            <div id='moviepages'>
+                                <div id='movietopleftpage-one'>
+                                    <img src={`https://image.tmdb.org/t/p/w500${heading.backdrop_path}`} alt="Image are not upload" className="adj-img" />
+                                </div>
+                                <div id='movietopleftpage-two'>
+                                    <div id='movietopleft-heading'>
+                                        <h1>{heading.original_title}</h1>
+                                        <p>Rating: {heading.vote_average}</p>
+                                    </div>
+                                    <div id='movietopbottom-heading'>
+                                        <p>{heading.tagline}</p>
+                                        <p>Realease Date: {heading.release_date}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id='movieoverview'>
+                                <h1>Overview</h1>
+                                <p>{heading.overview}</p>
+                            </div>
+                        </div>
+                        <div id='movietoprightpage'>
+                            <img src={`https://image.tmdb.org/t/p/w500${heading.poster_path}`} alt="Image are not upload" className="adj-img" />
+                        </div>
+
+                    </div>
+                </div>
                 <div id='homepage'>
                     {single && single.map((e) => (
                         <div id='homepage-one'>
@@ -72,12 +131,14 @@ const Singlemovie = () => {
                         </div>
                     ))}
                 </div>
+
             </div>
         </div>
     );
 };
 
 export default Singlemovie;
+
 {/* <div id='singlemoviepage'>
                 <div id='singlemovie'>
                     {single && single.map((e) => (
