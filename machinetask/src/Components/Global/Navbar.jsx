@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../../Styles/Navbar.css'
+import { useParams } from 'react-router-dom';
 
 const Navbar = () => {
+
+    const[data, setdata] = useState();
+    console.log(data, "data");
+
+    // const name = useParams()
+    // console.log(data.original_title);
     return (
         <div id='navbar-fullpage'>
             <div id='navbar-page'>

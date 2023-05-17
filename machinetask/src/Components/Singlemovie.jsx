@@ -61,7 +61,7 @@ const Singlemovie = () => {
         fetch(`https://api.themoviedb.org/3/movie/${data.id}?api_key=${API_key}&language=en-US`)
             .then(res => res.json())
             .then(json => setheading(json))
-
+  
         // fetch(`https://api.themoviedb.org/3/movie/${data.id}/credits?api_key=${API_key}&language=en-US`)
         //     .then(res => res.json())
         //     .then(json => console.log(json.cast, "helllo"))
@@ -78,10 +78,6 @@ const Singlemovie = () => {
                 }
             })
             .catch(err => console.error(err));
-
-
-
-
     }, []);
     console.log(heading, "heading");
     console.log(single, "single");
@@ -139,20 +135,3 @@ const Singlemovie = () => {
 
 export default Singlemovie;
 
-{/* <div id='singlemoviepage'>
-                <div id='singlemovie'>
-                    {single && single.map((e) => (
-                        <div id='castmovie'>
-                            <div id='castmoviestar'>
-                                <div id='castpic'>
-                                    <img src={`https://image.tmdb.org/t/p/w500${e.profile_path}`} alt="logo" className="adj-img" />
-                                </div>
-                                <div id='castname'>
-                                    <p>{e.original_name}</p>
-                                    <p style={{ marginTop: "4%", }}>{e.known_for_department}</p>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div> */}

@@ -21,6 +21,7 @@ const Home = () => {
 
   function opensinglemovie(e){
     route(`/singlemovie/${e.id}`)
+    // route(`/Searchmovie/${e.original_title}`)
   }
 
 
