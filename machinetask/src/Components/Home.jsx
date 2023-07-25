@@ -17,9 +17,9 @@ const Home = () => {
       .then(res => res.json())
       .then(json => setData(json.results))
   }, [])
-  console.log(Data, "Data");
+  // console.log(Data, "Data");
 
-  function opensinglemovie(e){
+  function opensinglemovie(e) {
     route(`/singlemovie/${e.id}`)
     // route(`/Searchmovie/${e.original_title}`)
   }
@@ -27,16 +27,16 @@ const Home = () => {
 
   return (
     <>
-      <div id='homepagefullpage'>
-        <div id='homepage'>
+      <div className='homepagefullpage'>
+        <div className='homepage'>
           {Data && Data.map((e) => (
-            <div id='homepage-one' onClick={() => opensinglemovie(e)}>
-              <div id='homepage-one-box'>
-              <img src ={`https://image.tmdb.org/t/p/w500${e.backdrop_path}`} alt="logo" className="adj-img" />
+            <div className='homepage-one' onClick={() => opensinglemovie(e)}>
+              <div className='homepage-one-box'>
+                <img src={`https://image.tmdb.org/t/p/w500${e.backdrop_path}`} alt="logo" className="adj-img" />
               </div>
-              <div id='homepage-one-box-caption'>
+              <div className='homepage-one-box-caption'>
                 <p>{e.title}</p>
-                <p style={{marginTop:"3%"}}>Rating: {e.vote_average}</p>
+                <p style={{ marginTop: "3%" }}>Rating: {e.vote_average}</p>
               </div>
             </div>
           ))}

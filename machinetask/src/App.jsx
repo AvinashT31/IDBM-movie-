@@ -21,10 +21,7 @@ function App() {
         <Route exact path='/topratedmovie' element={<Toprated/>}></Route>
         <Route exact path='/upcomingmovie' element={<Upcomingmovie/>}></Route>
         <Route exact path='/singlemovie/:id' element={<Singlemovie/>}></Route>
-        <Route exact path='/searchmovie' element={<Searchmovie/>}></Route>
-
-
-
+        <Route exact path='/searchmovie/:movie' element={<Searchmovie/>}></Route>
       </Routes>
     </div>
   );

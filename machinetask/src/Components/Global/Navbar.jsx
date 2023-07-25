@@ -1,57 +1,52 @@
 import React, { useState } from 'react'
 import '../../Styles/Navbar.css'
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+
+const API_key = "c45a857c193f6302f2b5061c3b85e743";
 
 const Navbar = () => {
 
-    const[data, setdata] = useState();
-    console.log(data, "data");
+    const [query, setquery] = useState({ movie: "" });
+    console.log(query, "query");
 
-    // const name = useParams()
-    // console.log(data.original_title);
+    const route = useNavigate();
+
+    function searchhere(e) {
+        var name = e.target.name;
+        var value = e.target.value;
+        setquery({ ...query, [name]: value });
+    }
+
+    function handlesearch(e) {
+        e.preventDefault();
+        setquery({ movie: "" });
+        route(`/searchmovie/${query.movie}`)
+    }
+
     return (
-        <div id='navbar-fullpage'>
-            <div id='navbar-page'>
-                <div id='navbar-left'>
-                    <div className='navbar-left-one'>
-                        <img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg" alt="" />
-                    </div>
-                    <div className='navbar-left-two'>
-                        <p>Movies</p>
-                    </div>
-                    <div className='navbar-left-two'>
-                        <p>Tv Show</p>
-                    </div>
-                    <div className='navbar-left-two'>
-                        <p>People</p>
-                    </div>
-                    <div className='navbar-left-two'>
-                        <p>More</p>
+        <div className='navbar-fullpage'>
+            <div className='navbar-page'>
+                <div className='navbar-left'>
+                    <div onClick={() => route('/')} className='navbar-left-one'>
+                        <p>MovieDb</p>
                     </div>
                 </div>
-                <div id='navbar-right'>
-                    <div className='navbar-right-one'>
-                        <i class="fa-solid fa-plus"></i>
+                <div className='navbar-right'>
+                    <div onClick={() => route('/')} className='navbar-right-one'>
+                        <p>Popular</p>
                     </div>
-                    <div className='navbar-right-two'>
-                        <div className='navitem'>
-                            <p>EN</p>
-                        </div>
+                    <div onClick={() => route('/topratedmovie')} className='navbar-right-two'>
+                        <p>Top Rated</p>
                     </div>
-                    <div className='navbar-right-three'>
-                        <p>Login</p>
+                    <div onClick={() => route('/upcomingmovie')} className='navbar-right-three'>
+                        <p>Upcoming</p>
                     </div>
                     <div className='navbar-right-four'>
-                        <p>Join TMDB</p>
+                        <input onChange={(e) => searchhere(e)} name='movie' value={query.movie} type="text" placeholder='Movie Name' />
+                        <button onClick={(e) => handlesearch(e)} >Search</button>
                     </div>
-                    <div className='navbar-right-five'>
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </div>
-
                 </div>
-
             </div>
-
         </div>
     )
 }

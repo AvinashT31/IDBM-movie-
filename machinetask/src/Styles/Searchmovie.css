@@ -5,7 +5,7 @@
     /* overflow: hidden; */
 }
 
-.homepagefullpage {
+.searchfullpage {
     /* border: 1px solid black; */
     width: 100vw;
     /* height: 100vh; */
@@ -13,7 +13,7 @@
     box-sizing: border-box;
 }
 
-.homepage {
+.searchpage {
     /* border: 1px solid black; */
     width: 90%;
     margin: auto;
@@ -25,25 +25,25 @@
     gap: 50px;
 }
 
-.homepage-one {
+.searchpage-one {
     /* border: 1px solid black; */
     width: 17%;
     height: 90%;
     box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-.homepage-one-box {
+.searchpage-one-box {
     /* border: 1px solid black; */
     width: 100%;
     height: 35vh;
 }
 
-.homepage-one-box img {
+.searchpage-one-box img {
     width: 100%;
     height: 100%;
 }
 
-.homepage-one-box-caption {
+.searchpage-one-box-caption {
     border: px solid black;
     width: 100%;
     height: 10vh;
@@ -57,47 +57,47 @@
 }
 
 
-
 @media screen and (min-width:1000px) and (max-width:1100px) {
-    .homepage-one {
+    .searchpage-one {
         width: 27%;
     }
 }
 
+
 @media screen and (min-width:800px) and (max-width:1000px) {
-    .homepage-one {
+    .searchpage-one {
         width: 28%;
     }
 }
 
 @media screen and (min-width:600px) and (max-width:800px) {
-    .homepage-one {
+    .searchpage-one {
         width: 45%;
     }
 }
 
 @media screen and (min-width:480px) and (max-width:600px) {
-    .homepage-one {
+    .searchpage-one {
         width: 40%;
     }
 }
 
 @media screen and (min-width:360px) and (max-width:480px) {
-    .homepage {
+    .searchpage {
         justify-content: center;
     }
 
-    .homepage-one {
+    .searchpage-one {
         width: 70%;
     }
 }
 
 @media screen and (min-width:230px) and (max-width:360px) {
-    .homepage {
+    .searchpage {
         justify-content: center;
     }
 
-    .homepage-one {
+    .searchpage-one {
         width: 90%;
     }
 }

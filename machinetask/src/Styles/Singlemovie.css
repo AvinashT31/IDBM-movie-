@@ -1,22 +1,22 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-#singlemoviepage{
+.singlemoviepage {
     /* border: 1px solid black; */
     width: 100vw;
     /* height: 100vh; */
 }
 
-#moviepage{
+.moviepage {
     /* border: 1px solid black; */
     width: 100vw;
     height: 60vh;
 }
 
-#movietoppage{
+.movietoppage {
     /* border: 1px solid black; */
     width: 90%;
     margin: auto;
@@ -24,20 +24,20 @@
     display: flex;
 }
 
-#movietopleftpage{
+.movietopleftpage {
     /* border: 1px solid black; */
     width: 55%;
     height: 60vh;
 }
 
-#moviepages{
+.moviepages {
     /* border: 1px solid black; */
     width: 100%;
     height: 30vh;
     display: flex;
 }
 
-#movietopleftpage-one{
+.movietopleftpage-one {
     /* border: 1px solid black; */
     width: 20%;
     height: 25vh;
@@ -46,12 +46,12 @@
     left: 3%;
 }
 
-#movietopleftpage-one img{
+.movietopleftpage-one img {
     width: 100%;
     height: 100%;
 }
 
-#movietopleftpage-two{
+.movietopleftpage-two {
     /* border: 1px solid black; */
     width: 60%;
     height: 25vh;
@@ -60,7 +60,7 @@
     left: 7%;
 }
 
-#movietopleft-heading{
+.movietopleft-heading {
     /* border: 1px solid black; */
     width: 100%;
     height: 12vh;
@@ -69,13 +69,13 @@
     font-size: 11px;
 }
 
-#movietopleft-heading p{
+.movietopleft-heading p {
     margin-top: 2%;
     font-size: 16px;
     font-weight: 550;
 }
 
-#movietopbottom-heading{
+.movietopbottom-heading {
     /* border: 1px solid black; */
     width: 100%;
     height: 12vh;
@@ -84,7 +84,7 @@
     font-weight: 550;
 }
 
-#movieoverview{
+.movieoverview {
     /* border: 1px solid black; */
     width: 100%;
     height: 30vh;
@@ -92,16 +92,138 @@
     text-align: left;
 }
 
-#movietoprightpage{
+.movietoprightpage {
     /* border: 1px solid black; */
     width: 45%;
     height: 60vh;
 }
 
-#movietoprightpage img{
+.movietoprightpage img {
     width: 80%;
     height: 80%;
     margin-top: 10px;
 }
 
 
+
+@media screen and (min-width:1000px) and (max-width:1100px) {
+    .movietoppage {
+        height: 62vh;
+    }
+
+    .homepage {
+        margin-top: 10%;
+    }
+
+}
+
+@media screen and (min-width:800px) and (max-width:1000px) {
+    .homepage {
+        margin-top: 8%;
+    }
+
+    .moviepage {
+        height: 66vh;
+    }
+
+    .movietopleftpage-one {
+        width: 40%;
+    }
+}
+
+
+@media screen and (min-width:600px) and (max-width:800px) {
+    .movietoprightpage {
+        display: none;
+    }
+
+    .movietopleftpage {
+        width: 100%;
+        height: 30vh;
+        justify-content: space-between;
+    }
+
+    .movietopleftpage-two {
+        left: 15%;
+    }
+
+    .movietopleftpage-one {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width:480px) and (max-width:600px) {
+    .movietoprightpage {
+        display: none;
+    }
+
+    .movietopleftpage {
+        width: 100%;
+        height: 30vh;
+        justify-content: space-between;
+    }
+
+    .movietopleftpage-two {
+        left: 15%;
+    }
+
+    .movietopleftpage-one {
+        width: 30%;
+    }
+
+    .homepage {
+        margin-top: 15%;
+    }
+}
+
+@media screen and (min-width:360px) and (max-width:480px) {
+    .movietopleftpage {
+        width: 100%;
+    }
+
+    .movietoprightpage {
+        display: none;
+    }
+
+    .movietopleftpage-one {
+        width: 37%;
+        height: 19vh;
+    }
+
+    .moviepages {
+        height: 24vh;
+    }
+
+    .homepage {
+        margin-top: 35%;
+    }
+}
+
+
+@media screen and (min-width:280px) and (max-width:360px) {
+    .movietopleftpage {
+        width: 100%;
+    }
+
+    .movietoprightpage {
+        display: none;
+    }
+
+    .movietopleftpage-one {
+        width: 37%;
+        height: 19vh;
+    }
+
+    .moviepages {
+        height: 24vh;
+        justify-content: space-between;
+    }
+
+    .homepage {
+        margin-top: 70%;
+    }
+
+    .movietopleft-heading{
+        height: 10vh;
+    }
+}

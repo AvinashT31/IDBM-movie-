@@ -9,27 +9,27 @@ const fetchurl = `https://api.themoviedb.org/3/movie/upcoming?api_key=${API_key}
 
 const Upcomingmovie = () => {
 
-    const[Data, setData] = useState([]);
-    console.log(Data, "Data");
+  const [Data, setData] = useState([]);
+  console.log(Data, "Data");
 
-    useEffect(() => {
-        fetch(fetchurl)
-        .then(Response => Response.json())
-        .then(json => setData(json.results))
-    }, [])
-    console.log(Data, "Data");
+  useEffect(() => {
+    fetch(fetchurl)
+      .then(Response => Response.json())
+      .then(json => setData(json.results))
+  }, [])
+  console.log(Data, "Data");
   return (
     <div>
-      <div id='homepagefullpage'>
-        <div id='homepage'>
+      <div className='homepagefullpage'>
+        <div className='homepage'>
           {Data && Data.map((e) => (
-            <div id='homepage-one'>
-              <div id='homepage-one-box'>
-              <img src ={`https://image.tmdb.org/t/p/w500${e.backdrop_path}`} alt="logo" className="adj-img" />
+            <div className='homepage-one'>
+              <div className='homepage-one-box'>
+                <img src={`https://image.tmdb.org/t/p/w500${e.backdrop_path}`} alt="logo" className="adj-img" />
               </div>
-              <div id='homepage-one-box-caption'>
+              <div className='homepage-one-box-caption'>
                 <p>{e.title}</p>
-                <p style={{marginTop:"3%"}}>Rating: {e.vote_average}</p>
+                <p style={{ marginTop: "3%" }}>Rating: {e.vote_average}</p>
               </div>
             </div>
           ))}

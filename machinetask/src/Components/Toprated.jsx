@@ -13,23 +13,22 @@ const Toprated = () => {
 
     useEffect(() => {
         fetch(fetchurl)
-        .then(response => response.json())
-        .then(json => settopratedmovie(json.results))
+            .then(response => response.json())
+            .then(json => settopratedmovie(json.results))
     }, [])
     console.log(topratedmovie, "hello");
     return (
         <div>
-            <div id='homepagefullpage'>
-                <div id='homepagetop'>
-
+            <div className='homepagefullpage'>
+                <div className='homepagetop'>
                 </div>
-                <div id='homepage'>
+                <div className='homepage'>
                     {topratedmovie && topratedmovie.map((e) => (
-                        <div id='homepage-one'>
-                            <div id='homepage-one-box'>
+                        <div className='homepage-one'>
+                            <div className='homepage-one-box'>
                                 <img src={`https://image.tmdb.org/t/p/w500${e.backdrop_path}`} alt="logo" className="adj-img" />
                             </div>
-                            <div id='homepage-one-box-caption'>
+                            <div className='homepage-one-box-caption'>
                                 <p>{e.title}</p>
                                 <p style={{ marginTop: "3%" }}>Rating: {e.vote_average}</p>
                             </div>
