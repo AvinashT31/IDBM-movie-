@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import '../Styles/Home.css'
-import { json } from 'react-router-dom';
 
 const API_key = "c45a857c193f6302f2b5061c3b85e743";
 

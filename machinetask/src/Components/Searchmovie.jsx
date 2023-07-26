@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
-import '../Styles/Searchmovie.css'
+import '../Styles/Home.css'
 
 const API_key = "c45a857c193f6302f2b5061c3b85e743";
 
