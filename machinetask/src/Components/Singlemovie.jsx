@@ -15,7 +15,6 @@ const Singlemovie = () => {
 
     useEffect(() => {
 
-
         fetch(`https://api.themoviedb.org/3/movie/${data.id}?api_key=${API_key}&language=en-US`)
             .then(res => res.json())
             .then(json => setheading(json))

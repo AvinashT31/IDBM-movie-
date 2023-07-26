@@ -5,6 +5,34 @@
     /* overflow: hidden; */
 }
 
+/* Hamberg */
+.hamberg{
+   display:flex;
+   justify-content: center;
+   align-items:center;
+   
+}
+
+/* MobList */
+.mobList{
+    position: fixed;
+    top:9%;
+    right:0;
+    width:100px;
+    height:100px;
+    /* border:1px solid red; */
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgb(3, 37, 65);
+    color:white;
+    
+}
+.mobList >p:hover{
+    /* border:1px solid white; */
+    color:red;
+}
+
 .homepagefullpage {
     /* border: 1px solid black; */
     width: 100vw;
@@ -916,3 +944,5 @@
         white-space: pre-wrap;
     }
 }
+
+
