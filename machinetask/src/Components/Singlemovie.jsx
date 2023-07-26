@@ -66,13 +66,13 @@ const Singlemovie = () => {
                         </div>
                     </div>
                 </div>
-                <div className='homepage'>
+                <div className='singlepage'>
                     {single && single.map((e) => (
-                        <div className='homepage-one'>
-                            <div className='homepage-one-box'>
+                        <div className='singlepage-one'>
+                            <div className='singlepage-one-box'>
                                 <img src={`https://image.tmdb.org/t/p/w500${e.profile_path}`} alt="Image are not upload" className="adj-img" />
                             </div>
-                            <div className='homepage-one-box-caption'>
+                            <div className='singlepage-one-box-caption'>
                                 <p>{e.original_name}</p>
                                 <p style={{ marginTop: "3%" }}>Rating: {e.known_for_department}</p>
                             </div>
