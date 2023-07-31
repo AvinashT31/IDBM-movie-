@@ -16,6 +16,7 @@ const Toprated = () => {
             .then(json => settopratedmovie(json.results))
     }, [])
     console.log(topratedmovie, "hello");
+    
     return (
         <div>
             <div className='homepagefullpage'>
